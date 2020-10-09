@@ -1,6 +1,22 @@
 <section id="start-game-section">
-  <form fxLayout="column" fxLayoutAlign="center center" [formGroup]="startGameForm">
+  <form fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="10px" [formGroup]="startGameForm" (ngSubmit)="onSubmit()">
+    <h2>Players</h2>
+    <mat-form-field>
+      <input type="text" matInput placeholder="Player 1" formControlName="player1">
+    </mat-form-field>
+    <mat-form-field>
+      <input type="text" matInput placeholder="Player 2" formControlName="player2">
+    </mat-form-field>
 
-    <button type="submit" mat-flat-button color="accent">Start</button>
+
+    <h2>Chess Timer</h2>
+    <mat-form-field>
+      <input type="time" matInput placeholder="Start" formControlName="start">
+    </mat-form-field>
+    <mat-form-field>
+      <input type="time" matInput placeholder="Turn" formControlName="turn">
+    </mat-form-field>
+
+    <button type="submit" mat-flat-button color="accent" [disabled]="!startGameForm.valid">Start</button>
   </form>
 </section>

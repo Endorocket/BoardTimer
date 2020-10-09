@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-start-game',
@@ -12,6 +12,15 @@ export class StartGameComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    this.startGameForm = new FormGroup({
+      player1: new FormControl(null, [Validators.required]),
+      player2: new FormControl(null, [Validators.required]),
+      start: new FormControl(null, [Validators.required]),
+      turn: new FormControl(null, [Validators.required]),
+    });
   }
 
+  onSubmit(): void {
+    console.log(this.startGameForm);
+  }
 }
