@@ -16,6 +16,8 @@ export class GameService {
   }
 
   startGame(players: Player[], timer: Timer): void {
+    console.log(timer);
+    console.log(players);
     this.players = players;
     this.timer = timer;
   }

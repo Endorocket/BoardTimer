@@ -1,4 +1,4 @@
 export interface Timer {
-  start: number;
-  turn: number;
+  start: Date;
+  turn: Date;
 }
