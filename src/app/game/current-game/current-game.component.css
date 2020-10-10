@@ -2,12 +2,14 @@
   height: 100%;
 }
 
-.player-section.color1 {
-  margin-top: -70px;
+.player-section {
+  cursor: pointer;
+  text-align: center;
+  height: 50%;
 }
 
-.player-section {
-  height: 50%;
+.player-section.color1 {
+  margin-top: -70px;
 }
 
 .color1 {
@@ -30,7 +32,24 @@
   width: 70px;
   height: 70px;
   position: relative;
+  z-index: 1;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+.icon-2x {
+  transform: scale(2);
+}
+
+.unselectable {
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+/Edge */
+  user-select: none; /* Standard */
+}
+
+.current-player .player-name,
+.current-player .timer {
+  font-size: 40px;
 }
