@@ -1,0 +1,36 @@
+#current-game-section {
+  height: 100%;
+}
+
+.player-section.color1 {
+  margin-top: -70px;
+}
+
+.player-section {
+  height: 50%;
+}
+
+.color1 {
+  background-color: #cd7c1d;
+}
+
+.color2 {
+  background-color: #cf1cd9;
+}
+
+.player-name {
+  font-size: 30px;
+}
+
+.timer {
+  font-size: 30px;
+}
+
+.floating-pause-button {
+  width: 70px;
+  height: 70px;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

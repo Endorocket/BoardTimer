@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-start-game',
@@ -9,7 +10,8 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 export class StartGameComponent implements OnInit {
   startGameForm: FormGroup;
 
-  constructor() { }
+  constructor(private router: Router) {
+  }
 
   ngOnInit(): void {
     this.startGameForm = new FormGroup({
@@ -22,5 +24,6 @@ export class StartGameComponent implements OnInit {
 
   onSubmit(): void {
     console.log(this.startGameForm);
+    this.router.navigate(['/current-game']);
   }
 }

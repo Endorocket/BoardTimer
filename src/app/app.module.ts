@@ -10,7 +10,8 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './navigation/header/header.component';
 import { SidenavComponent } from './navigation/sidenav/sidenav.component';
 import { WelcomeComponent } from './welcome/welcome.component';
-import { StartGameComponent } from './start-game/start-game.component';
+import { StartGameComponent } from './game/start-game/start-game.component';
+import { CurrentGameComponent } from './game/current-game/current-game.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { StartGameComponent } from './start-game/start-game.component';
     HeaderComponent,
     SidenavComponent,
     WelcomeComponent,
-    StartGameComponent
+    StartGameComponent,
+    CurrentGameComponent
   ],
   imports: [
     BrowserModule,
