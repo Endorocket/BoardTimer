@@ -6,6 +6,7 @@ import { Timer } from './timer.model';
 export class GameService {
   players: Player[] = [];
   timer: Timer;
+  gameStarted = false;
 
   getPlayers(): Player[] {
     return this.players.slice();
@@ -16,9 +17,8 @@ export class GameService {
   }
 
   startGame(players: Player[], timer: Timer): void {
-    console.log(timer);
-    console.log(players);
     this.players = players;
     this.timer = timer;
+    this.gameStarted = true;
   }
 }

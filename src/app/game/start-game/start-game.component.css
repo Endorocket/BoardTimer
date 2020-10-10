@@ -3,6 +3,10 @@
   padding-top: 20px;
 }
 
+mat-card {
+  padding: 30px;
+}
+
 button {
   padding: 10px 16px;
   font-size: 30px;

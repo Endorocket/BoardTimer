@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+
 import { GameService } from '../game.service';
 import { Player } from '../player.model';
 import { Timer } from '../timer.model';
@@ -26,7 +27,6 @@ export class StartGameComponent implements OnInit {
   }
 
   onSubmit(): void {
-    console.log(this.startGameForm);
     const player1Name = this.startGameForm.value.player1;
     const player2Name = this.startGameForm.value.player2;
 

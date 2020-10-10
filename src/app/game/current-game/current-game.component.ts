@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+
 import { GameService } from '../game.service';
 import { Timer } from '../timer.model';
 import { Player } from '../player.model';
@@ -48,8 +49,6 @@ export class CurrentGameComponent implements OnInit {
   private startInterval(): void {
     this.intervalId = setInterval(() => {
       const currentPlayer = this.players[this.currentPlayerIndex];
-      console.log(currentPlayer);
-      console.log(this.players[this.currentPlayerIndex].time.getSeconds());
       currentPlayer.time = new Date(currentPlayer.time.setSeconds(currentPlayer.time.getSeconds() - 1));
       if (currentPlayer.time.getMinutes() === 0 && currentPlayer.time.getSeconds() === 0) {
         clearInterval(this.intervalId);
