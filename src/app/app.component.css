@@ -5,3 +5,9 @@ mat-sidenav-container, mat-sidenav-content, mat-sidenav, main {
 mat-sidenav {
   width: 250px;
 }
+
+app-header {
+  z-index: 1;
+  position: absolute;
+  width: 100%;
+}
